@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES9扩展运算符与rest参数</title>
+</head>
+<body>
+    <script>
+        // function fn1(name, age, ...user) {
+        //     console.log(name);
+        //     console.log(age);
+        //     console.log(user);
+        // }
+        //
+        // fn1('peiqi', 18, 'qiaozhi', 'tom')
+
+        const user1 = {
+            name: 'peiqi',
+            age: 19
+        }
+        const user2 = {
+            name: 'qiaozhi',
+            age: 20
+        }
+        const user3 = {
+            name: 'tom',
+            age: 21
+        }
+        const users = {...user1, ...user2, ...user3}
+        console.log(users);
+    </script>
+</body>
+</html>

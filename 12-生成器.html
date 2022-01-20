@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成器</title>
+</head>
+<body>
+    <script>
+        //生成器是一个特殊的函数
+        //用于异步编程
+        //yield---函数代码的分隔符
+        function * gen() {
+            // console.log('111');
+            yield '-------';
+            // console.log('222');
+            yield '*******';
+            // console.log('333');
+            yield '#######';
+            // console.log('444');
+        }
+        let iterator = gen();
+        console.log(iterator);
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        // for (let v of gen()) {
+        //     console.log(v);
+        // }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        //
+        let m = new Map();
+
+        //添加元素
+        m.set('name', 'peiqi')
+        m.set('age', 18)
+        let key = {
+            school: 'njupt'
+        };
+        m.set(key, ['11', '22', '33']);
+        console.log(m);
+
+        //元素个数
+        console.log(m.size);
+
+        //删除元素
+        m.delete('age');
+        console.log(m);
+
+        //获取
+        console.log(m.get('name'));
+        console.log(m.get(key));
+
+        //清空
+        // m.clear();
+        // console.log(m);
+
+        for (let v of m) {
+            console.log(v);
+        }
+
+    </script>
+</body>
+</html>

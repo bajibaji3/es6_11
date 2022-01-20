@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set集合</title>
+</head>
+<body>
+    <script>
+        //
+        let s1 = new Set(['peiqi', 'qiaozhi', 'tom']);
+
+        //元素个数
+        console.log(s1.size);
+
+        //添加新元素
+        s1.add('tony');
+        console.log(s1);
+
+        //删除元素
+        s1.delete('tony');
+        console.log(s1);
+
+        //检测
+        console.log(s1.has('peiqi'));
+
+        //清空
+        // s1.clear();
+        // console.log(s1);
+
+        for (let v of s1) {
+            console.log(v);
+        }
+
+    </script>
+</body>
+</html>

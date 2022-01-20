@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rest参数</title>
+</head>
+<body>
+    <script>
+        //rest代替arguments获取函数实参
+        //1、ES5获取实参
+        function fn1() {
+            console.log(arguments);
+        }
+        fn1('peiqi', 18)
+
+        //2、ES6 rest参数
+        function fn2(...args) {
+            console.log(args);
+        }
+        fn2('peiqi', 18)
+
+        //3、rest参数必须放在最后
+        function fn3(a, b, ...args) {
+            console.log(a, b);
+            console.log(args);
+        }
+        fn3(1, 2, 'peiqi', 18)
+
+
+    </script>
+</body>
+</html>

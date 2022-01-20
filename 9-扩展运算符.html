@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扩展运算符</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        //扩展运算符将数组转化为逗号分隔的参数序列
+        const names = ['peiqi', 'qiaozhi', 'tom']; // => 'peiqi', 'qiaozhi', 'tom'
+        function fn1() {
+            console.log(arguments);
+        }
+        fn1(names);
+        fn1(...names); //fn1('peiqi', 'qiaozhi', 'tom')
+
+        //1、数组的合并
+        const names1 = ['peiqi', 'qiaozhi', 'tom'];
+        const names2 = ['peiqi1', 'qiaozhi1', 'tom1'];
+        const names3 = [...names1, ...names2];
+        console.log(names3);
+
+        //2、数组克隆
+        const names4 = ['peiqi', 'qiaozhi', 'tom'];
+        const names5 = [...names4];
+        console.log(names5);
+
+        //2、将伪数组转化为真数组
+        const divs = document.querySelectorAll('div')
+        console.log(divs);
+        const divArr = [...divs]
+        console.log(divArr);
+
+
+    </script>
+</body>
+</html>

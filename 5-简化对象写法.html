@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简化对象写法</title>
+</head>
+<body>
+    <script>
+        //1、大括号里直接写变量和函数
+        let name = 'peiqi'
+        let change = function () {
+            console.log('qiaozhi');
+        }
+        const user = {
+            name,
+            change,
+        }
+        console.log(user);
+
+        const user1 = {
+            name,
+            change,
+            //可以直接写方法名，不用加function关键字
+            change1() {
+                console.log('peiqi');
+            }
+        }
+
+    </script>
+</body>
+</html>

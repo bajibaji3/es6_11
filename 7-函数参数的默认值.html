@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数参数的默认值</title>
+</head>
+<body>
+    <script>
+        //1、形参的初始值,具有默认值的参数一般位置要靠后（潜规则）
+        function add(a, b, c=10) {
+            return a + b + c;
+        }
+
+        console.log(add(1, 2));
+
+        //2、与解构赋值结合
+        function connect({name='qiaozhi', age}) {
+            console.log(name, age);
+        }
+
+        // connect({age: 18});
+        connect({name: 'peiqi', age: 18});
+
+    </script>
+</body>
+</html>

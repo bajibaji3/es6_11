@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES8-await</title>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            // resolve('用户数据');
+            reject('失败了');
+        })
+
+        //await要放在async函数中
+        async function fn1() {
+            try {
+                let res = await p;
+                console.log(res);
+            } catch (e) {
+                console.log(e);
+            }
+
+        }
+
+        fn1();
+    </script>
+</body>
+</html>

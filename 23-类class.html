@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        //ES5写法
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+        // //添加方法
+        // Phone.prototype.call = function () {
+        //     console.log('打电话');
+        // }
+        // //添加静态属性和方法
+        // Phone.name = 'peiqi';
+        // Phone.change = function () {
+        //     console.log('qiaozhi');
+        // }
+        // console.log(Phone.name);
+        // Phone.change();
+        // //实例化对象
+        // let phone = new Phone('huawei', 6999);
+        // phone.call();
+        // console.log(phone);
+
+        //class
+        class Phone {
+            constructor(brand, price) {
+                this.brand = brand;
+                this.price = price;
+            }
+
+            //方法必须使用该语法，不能使用ES5对象完整形式
+            call() {
+                console.log('打电话');
+            }
+
+            //添加静态属性和方法
+            static name = 'peiqi';
+            static change() {
+                console.log('qiaozhi');
+            }
+        }
+
+        console.log(Phone.name);
+        Phone.change();
+        //实例化对象
+        let phone = new Phone('huawei', 6999);
+        phone.call();
+        console.log(phone);
+
+    </script>
+</body>
+</html>

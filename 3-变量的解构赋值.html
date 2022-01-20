@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量的解构赋值</title>
+</head>
+<body>
+    <script>
+        //1、数组的解构
+        const names = ['peiqi', 'qiaozhi', 'tom']
+        let [a, b, c] = names;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        //2、对象的解构
+        const user = {
+            name: 'peiqi',
+            age: 18,
+        }
+        let {name, age} = user;
+        console.log(name);
+        console.log(age);
+
+    </script>
+</body>
+</html>

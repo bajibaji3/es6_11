@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>symbol</title>
+</head>
+<body>
+    <script>
+        //symbol是一种新的原始数据类型
+        //创建symbol
+        let s = Symbol()
+        console.log(s, typeof s);
+
+        let s1 = Symbol('peiqi')
+        let s2 = Symbol('peiqi')
+        console.log(s1);
+        console.log(s2);
+        console.log(s1 === s2);
+
+        let s3 = Symbol.for('peiqi')
+        let s4 = Symbol.for('peiqi')
+        console.log(s3);
+        console.log(s4);
+        console.log(s3 === s4);
+
+        //不能与其它数据进行运算
+        // let res1 = s + 100;
+        // let res2 = s + s;
+
+
+        //js数据类型
+        //undefined、string、symbol、object、null、number、boolean
+
+        /****symbol的使用****/
+        // let user = {
+        //     name: 'peiqi',
+        //     age: 18,
+        //     up: function () {
+        //         console.log('up, up');
+        //     }
+        // }
+        //
+        // let methods = {
+        //     up: Symbol(),
+        //     down: Symbol(),
+        // }
+        //
+        // user[methods.up] = function () {
+        //     console.log('up');
+        // }
+        //
+        // user[methods.down] = function () {
+        //     console.log('down');
+        // }
+        //
+        // console.log(user);
+
+        let user1 = {
+            name: 'peiqi',
+            [Symbol('up')]: function () {
+                console.log(up);
+            }
+        }
+        console.log(user1);
+
+        /****Symbol内置属性****/
+        // class Person{
+        //     static [Symbol.hasInstance](param) {
+        //         console.log(param);
+        //         console.log('检测类型');
+        //         // return true;
+        //         // return false;
+        //     }
+        // }
+        //
+        // let o = {};
+        // console.log(o instanceof Person);
+
+        // const arr1 = [1, 2, 3];
+        // const arr2 = [4, 5, 6];
+        // arr2[Symbol.isConcatSpreadable] = false;
+        // console.log(arr1.concat(arr2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>生成器函数参数</title>
+</head>
+<body>
+    <script>
+        function * gen(arg) {
+            console.log(arg);
+            let one = yield 111111;
+            console.log(one);
+            let two = yield 222222;
+            console.log(two);
+            let three = yield 333333;
+            console.log(three);
+        }
+        let iterator = gen('aaa');
+        //next方法可以传入实参
+        console.log(iterator.next());
+        console.log(iterator.next('bbb'));
+        console.log(iterator.next('ccc'));
+        console.log(iterator.next('ddd'));
+
+    </script>
+</body>
+</html>

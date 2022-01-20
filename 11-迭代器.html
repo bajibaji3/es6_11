@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>迭代器</title>
+</head>
+<body>
+    <script>
+        //使用for...of遍历
+        // const arr1 = ['peiqi', 'qiaozhi', 'tom'];
+        // for (let a of arr1) {
+        //     console.log(a);
+        // }
+        //
+        // let iterator = arr1[Symbol.iterator]();
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+
+        /*迭代器应用----自定义遍历数组*/
+        const obj = {
+            age: 18,
+            names: ['peiqi', 'qiaozhi', 'tom'],
+            [Symbol.iterator]() {
+                let index = 0;
+                let _this = this;
+                return {
+                    next: function () {
+                        if (index < _this.names.length) {
+                            const res = {value: _this.names[index], done: false}
+                            index++;
+                            return res;
+                        } else {
+                            return {value: undefined, done: true}
+                        }
+
+                    }
+                };
+            }
+        }
+        for (let o of obj) {
+            console.log(o);
+        }
+
+
+    </script>
+</body>
+</html>
